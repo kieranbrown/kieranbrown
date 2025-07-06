@@ -1,0 +1,13 @@
+name: Pre-commit AutoUpdate
+
+on:
+  schedule: ## 5am every week on Saturday
+    - cron: "0 5 * * 6"
+
+jobs:
+  autoupdate:
+    uses: kieranbrown/github-actions/.github/workflows/pre-commit-autoupdate.yaml@v1
+    permissions:
+      actions: write
+      contents: write
+      pull-requests: write

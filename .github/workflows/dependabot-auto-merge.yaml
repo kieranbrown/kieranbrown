@@ -1,0 +1,14 @@
+name: Dependabot auto-merge
+
+on:
+  pull_request:
+    paths:
+      - '.github/actions/**/*'
+      - '.github/workflows/**/*'
+
+jobs:
+  auto-merge:
+    uses: kieranbrown/github-actions/.github/workflows/dependabot-auto-merge.yaml@v1
+    permissions:
+      contents: write
+      pull-requests: write
